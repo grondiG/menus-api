@@ -1,0 +1,139 @@
+{
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "La Pizzeria",
+      "description": "A cozy place to enjoy authentic Italian pizzas and pastas",
+      "address": "ul. Kiełbaśnicza 21, 50-110 Wrocław",
+      "image": "https://via.placeholder.com/800x1000",
+      "menu": [
+        {
+          "name": "Margherita",
+          "price": "25 PLN",
+          "ingredients": ["tomato sauce", "mozzarella", "basil"],
+          "nutrition": {
+            "calories": 300,
+            "protein": 15,
+            "carbohydrates": 35,
+            "fat": 12,
+            "fiber": 5
+          }
+        },
+        {
+          "name": "Carbonara",
+          "price": "35 PLN",
+          "ingredients": ["cream sauce", "bacon", "parmesan", "egg"],
+          "nutrition": {
+            "calories": 450,
+            "protein": 20,
+            "carbohydrates": 25,
+            "fat": 18,
+            "fiber": 3
+          }
+        },
+        {
+          "name": "Tiramisu",
+          "price": "15 PLN",
+          "ingredients": ["mascarpone", "coffee", "ladyfingers", "cocoa"],
+          "nutrition": {
+            "calories": 200,
+            "protein": 5,
+            "carbohydrates": 30,
+            "fat": 10,
+            "fiber": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Sushi Master",
+      "description": "The best sushi in town, made with fresh and high-quality ingredients",
+      "address": "pl. Solny 14, 50-062 Wrocław",
+      "image": "https://via.placeholder.com/800x1000",
+      "menu": [
+        {
+          "name": "Salmon Nigiri",
+          "price": "12 PLN",
+          "ingredients": ["rice", "salmon", "wasabi", "soy sauce"],
+          "nutrition": {
+            "calories": 150,
+            "protein": 10,
+            "carbohydrates": 20,
+            "fat": 8,
+            "fiber": 1
+          }
+        },
+        {
+          "name": "California Roll",
+          "price": "18 PLN",
+          "ingredients": ["rice", "crab stick", "avocado", "cucumber", "sesame seeds"],
+          "nutrition": {
+            "calories": 250,
+            "protein": 12,
+            "carbohydrates": 30,
+            "fat": 15,
+            "fiber": 3
+          }
+        },
+        {
+          "name": "Mochi Ice Cream",
+          "price": "10 PLN",
+          "ingredients": ["rice cake", "ice cream", "powdered sugar"],
+          "nutrition": {
+            "calories": 180,
+            "protein": 5,
+            "carbohydrates": 25,
+            "fat": 10,
+            "fiber": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Veggie Garden",
+      "description": "A vegan-friendly restaurant with a variety of dishes from different cuisines",
+      "address": "ul. Świdnicka 11, 50-066 Wrocław",
+      "image": "https://via.placeholder.com/800x1000",
+      "menu": [
+        {
+          "name": "Falafel Wrap",
+          "price": "20 PLN",
+          "ingredients": ["tortilla", "falafel", "hummus", "salad", "tomato", "cucumber"],
+          "nutrition": {
+            "calories": 280,
+            "protein": 15,
+            "carbohydrates": 30,
+            "fat": 10,
+            "fiber": 6
+          }
+        },
+        {
+          "name": "Thai Curry",
+          "price": "30 PLN",
+          "ingredients": ["coconut milk", "tofu", "vegetables", "rice", "spices"],
+          "nutrition": {
+            "calories": 350,
+            "protein": 18,
+            "carbohydrates": 40,
+            "fat": 15,
+            "fiber": 5
+          }
+        },
+        {
+          "name": "Apple Pie",
+          "price": "12 PLN",
+          "ingredients": ["flour", "apple", "sugar", "cinnamon", "vegan butter"],
+          "nutrition": {
+            "calories": 200,
+            "protein": 3,
+            "carbohydrates": 25,
+            "fat": 8,
+            "fiber": 4
+          }
+        }
+      ]
+    }
+  ]
+}
