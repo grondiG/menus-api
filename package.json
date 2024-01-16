@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "concurrently \"nodemon  build/index.js --port=3001\" \"tsc -w\""
+    "start": "concurrently \"nodemon  build/index.js --port=3000\" \"tsc -w\""
   },
   "author": "",
   "license": "ISC",
