@@ -5,7 +5,7 @@
       "name": "La Pizzeria",
       "description": "A cozy place to enjoy authentic Italian pizzas and pastas",
       "address": "ul. Kiełbaśnicza 21, 50-110 Wrocław",
-      "image": "https://via.placeholder.com/800x1000",
+      "image": "https://fakeimg.pl/800x1000",
       "menu": [
         {
           "name": "Margherita",
@@ -50,7 +50,7 @@
       "name": "Sushi Master",
       "description": "The best sushi in town, made with fresh and high-quality ingredients",
       "address": "pl. Solny 14, 50-062 Wrocław",
-      "image": "https://via.placeholder.com/800x1000",
+      "image": "https://fakeimg.pl/800x1000",
       "menu": [
         {
           "name": "Salmon Nigiri",
@@ -95,7 +95,7 @@
       "name": "Veggie Garden",
       "description": "A vegan-friendly restaurant with a variety of dishes from different cuisines",
       "address": "ul. Świdnicka 11, 50-066 Wrocław",
-      "image": "https://via.placeholder.com/800x1000",
+      "image": "https://fakeimg.pl/800x1000",
       "menu": [
         {
           "name": "Falafel Wrap",
