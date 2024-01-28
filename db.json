@@ -10,7 +10,11 @@
         {
           "name": "Margherita",
           "price": "25 PLN",
-          "ingredients": ["tomato sauce", "mozzarella", "basil"],
+          "ingredients": [
+            "tomato sauce",
+            "mozzarella",
+            "basil"
+          ],
           "nutrition": {
             "calories": 300,
             "protein": 15,
@@ -22,7 +26,12 @@
         {
           "name": "Carbonara",
           "price": "35 PLN",
-          "ingredients": ["cream sauce", "bacon", "parmesan", "egg"],
+          "ingredients": [
+            "cream sauce",
+            "bacon",
+            "parmesan",
+            "egg"
+          ],
           "nutrition": {
             "calories": 450,
             "protein": 20,
@@ -34,7 +43,12 @@
         {
           "name": "Tiramisu",
           "price": "15 PLN",
-          "ingredients": ["mascarpone", "coffee", "ladyfingers", "cocoa"],
+          "ingredients": [
+            "mascarpone",
+            "coffee",
+            "ladyfingers",
+            "cocoa"
+          ],
           "nutrition": {
             "calories": 200,
             "protein": 5,
@@ -55,7 +69,12 @@
         {
           "name": "Salmon Nigiri",
           "price": "12 PLN",
-          "ingredients": ["rice", "salmon", "wasabi", "soy sauce"],
+          "ingredients": [
+            "rice",
+            "salmon",
+            "wasabi",
+            "soy sauce"
+          ],
           "nutrition": {
             "calories": 150,
             "protein": 10,
@@ -67,7 +86,13 @@
         {
           "name": "California Roll",
           "price": "18 PLN",
-          "ingredients": ["rice", "crab stick", "avocado", "cucumber", "sesame seeds"],
+          "ingredients": [
+            "rice",
+            "crab stick",
+            "avocado",
+            "cucumber",
+            "sesame seeds"
+          ],
           "nutrition": {
             "calories": 250,
             "protein": 12,
@@ -79,7 +104,11 @@
         {
           "name": "Mochi Ice Cream",
           "price": "10 PLN",
-          "ingredients": ["rice cake", "ice cream", "powdered sugar"],
+          "ingredients": [
+            "rice cake",
+            "ice cream",
+            "powdered sugar"
+          ],
           "nutrition": {
             "calories": 180,
             "protein": 5,
@@ -100,7 +129,14 @@
         {
           "name": "Falafel Wrap",
           "price": "20 PLN",
-          "ingredients": ["tortilla", "falafel", "hummus", "salad", "tomato", "cucumber"],
+          "ingredients": [
+            "tortilla",
+            "falafel",
+            "hummus",
+            "salad",
+            "tomato",
+            "cucumber"
+          ],
           "nutrition": {
             "calories": 280,
             "protein": 15,
@@ -112,7 +148,13 @@
         {
           "name": "Thai Curry",
           "price": "30 PLN",
-          "ingredients": ["coconut milk", "tofu", "vegetables", "rice", "spices"],
+          "ingredients": [
+            "coconut milk",
+            "tofu",
+            "vegetables",
+            "rice",
+            "spices"
+          ],
           "nutrition": {
             "calories": 350,
             "protein": 18,
@@ -124,7 +166,13 @@
         {
           "name": "Apple Pie",
           "price": "12 PLN",
-          "ingredients": ["flour", "apple", "sugar", "cinnamon", "vegan butter"],
+          "ingredients": [
+            "flour",
+            "apple",
+            "sugar",
+            "cinnamon",
+            "vegan butter"
+          ],
           "nutrition": {
             "calories": 200,
             "protein": 3,
@@ -134,6 +182,23 @@
           }
         }
       ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "asd@asd.pl",
+      "password": "123"
+    },
+    {
+      "id": "332a",
+      "login": "asd",
+      "mail": "asd@asd.pl",
+      "restaurantName": "asd",
+      "restaurantAddress": "asd",
+      "password": "Asd123.!",
+      "confirmPassword": "Asd123.!"
     }
   ]
 }
