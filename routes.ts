@@ -55,20 +55,25 @@ router.post('/register', async (req, res) => {
     try{
     axios.post('http://localhost:3001/users', req.body)
         .then((response: { data: any; }) => {
-            res.status(200).send({
-                data: {
-                    login: response.data[0].login,
-                    mail: response.data[0].mail,
-                    restaurantName: response.data[0].restaurantName,
-                    restaurantAddress: response.data[0].restaurantAddress,
-                },
-                token: generateAccessToken(req.body.login),
-            });
+            if(response.data.length !== 0) {
+                res.status(200).send({
+                    data: {
+                        login: response.data[0]?.login,
+                        mail: response.data[0]?.mail,
+                        restaurantName: response.data[0]?.restaurantName,
+                        restaurantAddress: response.data[0]?.restaurantAddress,
+                    },
+                    token: generateAccessToken(req.body.login),
+                });
+            }
+            else{
+                res.sendStatus(404);
+            }
         });
     }
     catch (e) {
         console.log(e);
-        res.sendStatus(500);
+        res.sendStatus(404);
     }
 });
 
@@ -76,20 +81,25 @@ router.post('/login', async (req, res) => {
     try{
         axios.get('http://localhost:3001/users', {params: {login: req.body.email, password: req.body.password}})
             .then((response: { data: any; }) => {
-                res.status(200).send({
-                    data: {
-                        login: response.data[0].login,
-                        mail: response.data[0].mail,
-                        restaurantName: response.data[0].restaurantName,
-                        restaurantAddress: response.data[0].restaurantAddress,
-                    },
-                    token: generateAccessToken(req.body.login),
-                });
+                if(response.data.length === 0){
+                    res.sendStatus(404);
+                }
+                else{
+                    res.status(200).send({
+                        data: {
+                            login: response.data[0]?.login,
+                            mail: response.data[0]?.mail,
+                            restaurantName: response.data[0]?.restaurantName,
+                            restaurantAddress: response.data[0]?.restaurantAddress,
+                        },
+                        token: generateAccessToken(req.body.login),
+                    });
+                }
             });
     }
     catch (e) {
         console.log(e);
-        res.sendStatus(500);
+        res.sendStatus(404);
     }
 });
 
