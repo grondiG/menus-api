@@ -18,7 +18,7 @@ router.get('/restaurants', async (req, res) => {
     }
 });
 
-router.get('/filterRestaurants',authenticateToken, async (req, res) => {
+router.get('/filterRestaurants', async (req, res) => {
     try{
         const restaurant = dbData.filter((restaurant: any) => restaurant.name.toLowerCase().startsWith(req.query.name?.toString().toLowerCase()));
         if(restaurant){
