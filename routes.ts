@@ -67,13 +67,16 @@ router.post('/register', async (req, res) => {
                 });
             }
             else{
-                res.sendStatus(404);
+                res.sendStatus(401).json({
+                    message: "Invalid credentials."
+                });
             }
         });
     }
     catch (e) {
-        console.log(e);
-        res.sendStatus(404).json(e);
+        res.sendStatus(500).json({
+            message: "Internal server error."
+        });
     }
 });
 
@@ -82,7 +85,10 @@ router.post('/login', async (req, res) => {
         axios.get('http://localhost:3001/users', {params: {login: req.body.email, password: req.body.password}})
             .then((response: { data: any; }) => {
                 if(response.data.length === 0){
-                    res.sendStatus(404);
+                    res.status(401).json({
+                        message: "Invalid login or password."
+                    });
+                    return;
                 }
                 else{
                     res.status(200).send({
@@ -94,12 +100,15 @@ router.post('/login', async (req, res) => {
                         },
                         token: generateAccessToken(req.body.login),
                     });
+                    return;
                 }
             });
     }
     catch (e) {
         console.log(e);
-        res.sendStatus(404).json(e);
+        res.status(500).json({
+            message: "Internal server error."
+        });
     }
 });
 
