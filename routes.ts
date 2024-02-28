@@ -148,6 +148,37 @@ router.get('/isTokenValid', authenticateToken, async (req, res) => {
     }
 });
 
+router.get('/ifNameExists', async (req, res) => {
+    try{
+        if(req.query.name === undefined){
+            res.status(400).send({
+                message: "Name is required."
+            });
+            return;
+        }
+        axios.get('http://localhost:3001/users', {params: {login: req.query.name}})
+            .then((response: { data: any; }) => {
+                console.log(response.data)
+                if(response.data.length === 0){
+                    res.status(200).send({
+                        exists: false,
+                    });
+                    return;
+                }
+                else{
+                    res.status(200).send({
+                        exists: true,
+                    });
+                    return;
+                }
+            });
+    }
+    catch(e){
+        console.log(e);
+        res.sendStatus(500);
+    }
+});
+
 const generateAccessToken = (username: string) => {
     return jwt.sign({username: username},  process.env.ACCESS_TOKEN_SECRET as string, { expiresIn: '1800s' });
 }
