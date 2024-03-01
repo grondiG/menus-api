@@ -199,6 +199,15 @@
       "restaurantAddress": "asd",
       "password": "Asd123.!",
       "confirmPassword": "Asd123.!"
+    },
+    {
+      "id": "333a",
+      "login": "test",
+      "mail": "test@test.pl",
+      "restaurantName": "test",
+      "restaurantAddress": "test",
+      "password": "test",
+      "confirmPassword": "test"
     }
   ],
   "orders": [

@@ -148,24 +148,34 @@ router.get('/isTokenValid', authenticateToken, async (req, res) => {
     }
 });
 
-router.post('/order', authenticateToken, async (req, res) => {
+router.get('/ifNameExists', async (req, res) => {
     try{
-        axios.post('http://localhost:3001/orders', req.body)
+        if(req.query.name === undefined){
+            res.status(400).send({
+                message: "Name is required."
+            });
+            return;
+        }
+        axios.get('http://localhost:3001/users', {params: {login: req.query.name}})
             .then((response: { data: any; }) => {
-                if(response.data.length !== 0) {
-                    res.status(200).send(response.data);
+                console.log(response.data)
+                if(response.data.length === 0){
+                    res.status(200).send({
+                        exists: false,
+                    });
+                    return;
                 }
                 else{
-                    res.sendStatus(401).json({
-                        message: "Invalid credentials."
+                    res.status(200).send({
+                        exists: true,
                     });
+                    return;
                 }
             });
     }
-    catch (e) {
-        res.sendStatus(500).json({
-            message: "Internal server error."
-        });
+    catch(e){
+        console.log(e);
+        res.sendStatus(500);
     }
 });
 
