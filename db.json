@@ -9,7 +9,7 @@
       "menu": [
         {
           "name": "Margherita",
-          "price": "25 PLN",
+          "price": "25 $",
           "ingredients": [
             "tomato sauce",
             "mozzarella",
@@ -25,7 +25,7 @@
         },
         {
           "name": "Carbonara",
-          "price": "35 PLN",
+          "price": "35 $",
           "ingredients": [
             "cream sauce",
             "bacon",
@@ -42,7 +42,7 @@
         },
         {
           "name": "Tiramisu",
-          "price": "15 PLN",
+          "price": "15 $",
           "ingredients": [
             "mascarpone",
             "coffee",
@@ -68,7 +68,7 @@
       "menu": [
         {
           "name": "Salmon Nigiri",
-          "price": "12 PLN",
+          "price": "12 $",
           "ingredients": [
             "rice",
             "salmon",
@@ -85,7 +85,7 @@
         },
         {
           "name": "California Roll",
-          "price": "18 PLN",
+          "price": "18 $",
           "ingredients": [
             "rice",
             "crab stick",
@@ -103,7 +103,7 @@
         },
         {
           "name": "Mochi Ice Cream",
-          "price": "10 PLN",
+          "price": "10 $",
           "ingredients": [
             "rice cake",
             "ice cream",
@@ -128,7 +128,7 @@
       "menu": [
         {
           "name": "Falafel Wrap",
-          "price": "20 PLN",
+          "price": "20 $",
           "ingredients": [
             "tortilla",
             "falafel",
@@ -147,7 +147,7 @@
         },
         {
           "name": "Thai Curry",
-          "price": "30 PLN",
+          "price": "30 $",
           "ingredients": [
             "coconut milk",
             "tofu",
@@ -165,7 +165,7 @@
         },
         {
           "name": "Apple Pie",
-          "price": "12 PLN",
+          "price": "12 $",
           "ingredients": [
             "flour",
             "apple",
@@ -200,5 +200,8 @@
       "password": "Asd123.!",
       "confirmPassword": "Asd123.!"
     }
+  ],
+  "orders": [
+
   ]
 }
