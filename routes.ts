@@ -179,6 +179,28 @@ router.get('/ifNameExists', async (req, res) => {
     }
 });
 
+router.post('/order', authenticateToken, async (req, res) => {
+    try{
+        axios.post('http://localhost:3001/orders', req.body)
+            .then((response: { data: any; }) => {
+                if(response.data.length !== 0) {
+                    res.status(200).send(response.data);
+                }
+                else{
+                    res.sendStatus(401).json({
+                        message: "Invalid credentials."
+                    });
+                }
+            });
+    }
+    catch (e) {
+        res.sendStatus(500).json({
+            message: "Internal server error."
+        });
+    }
+});
+
+
 const generateAccessToken = (username: string) => {
     return jwt.sign({username: username},  process.env.ACCESS_TOKEN_SECRET as string, { expiresIn: '1800s' });
 }
