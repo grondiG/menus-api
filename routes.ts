@@ -184,7 +184,7 @@ router.get('/ifNameExists', async (req, res) => {
 
 router.post('/order', authenticateToken, async (req, res) => {
     try{
-        axios.post('http://localhost:3001/orders', req.body)
+        axios.post('http://localhost:3001/orders', {...req.body, date: new Date().toISOString()})
             .then((response: { data: any; }) => {
                 if(response.data.length !== 0) {
                     res.status(200).send(response.data);
@@ -208,7 +208,6 @@ router.get('/orders', authenticateToken, async (req, res) => {
         console.log(req.query?.userId);
         axios.get('http://localhost:3001/orders?userId='+req.query?.userId)
             .then((response: { data: any; }) => {
-                console.log(response.data);
                 if(response.data.length !== 0) {
                     res.status(200).send(response.data);
                 }

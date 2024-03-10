@@ -211,6 +211,96 @@
     }
   ],
   "orders": [
-
+    {
+      "id": "8328",
+      "cart": [
+        {
+          "item": {
+            "name": "Salmon Nigiri",
+            "price": "12 $",
+            "ingredients": [
+              "rice",
+              "salmon",
+              "wasabi",
+              "soy sauce"
+            ],
+            "nutrition": {
+              "calories": 150,
+              "protein": 10,
+              "carbohydrates": 20,
+              "fat": 8,
+              "fiber": 1
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "shipping": {
+        "name": "asd",
+        "address": "asd",
+        "city": "asd",
+        "country": "asd",
+        "zip": "12-123"
+      },
+      "totalPrice": 12,
+      "userId": "333a",
+      "date": "2024-03-10T18:08:01.383Z"
+    },
+    {
+      "id": "9693",
+      "cart": [
+        {
+          "item": {
+            "name": "Salmon Nigiri",
+            "price": "12 $",
+            "ingredients": [
+              "rice",
+              "salmon",
+              "wasabi",
+              "soy sauce"
+            ],
+            "nutrition": {
+              "calories": 150,
+              "protein": 10,
+              "carbohydrates": 20,
+              "fat": 8,
+              "fiber": 1
+            }
+          },
+          "quantity": 1
+        },
+        {
+          "item": {
+            "name": "Apple Pie",
+            "price": "12 $",
+            "ingredients": [
+              "flour",
+              "apple",
+              "sugar",
+              "cinnamon",
+              "vegan butter"
+            ],
+            "nutrition": {
+              "calories": 200,
+              "protein": 3,
+              "carbohydrates": 25,
+              "fat": 8,
+              "fiber": 4
+            }
+          },
+          "quantity": 2
+        }
+      ],
+      "shipping": {
+        "name": "Arek",
+        "address": "Hutnicza 12",
+        "city": "Poznan",
+        "country": "Poland",
+        "zip": "12-123"
+      },
+      "totalPrice": 36,
+      "userId": "333a",
+      "date": "2024-03-10T18:11:49.078Z"
+    }
   ]
 }
