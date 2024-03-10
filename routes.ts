@@ -58,6 +58,7 @@ router.post('/register', async (req, res) => {
             if(response.data.length !== 0) {
                 res.status(200).send({
                     data: {
+                        id: response.data[0]?.id,
                         login: response.data[0]?.login,
                         mail: response.data[0]?.mail,
                         restaurantName: response.data[0]?.restaurantName,
@@ -93,6 +94,7 @@ router.post('/login', async (req, res) => {
                 else{
                     res.status(200).send({
                         data: {
+                            id: response.data[0]?.id,
                             login: response.data[0]?.login,
                             mail: response.data[0]?.mail,
                             restaurantName: response.data[0]?.restaurantName,
@@ -130,6 +132,7 @@ router.get('/isTokenValid', authenticateToken, async (req, res) => {
                     else{
                         res.status(200).send({
                             data: {
+                                id: response.data[0]?.id,
                                 login: response.data[0]?.login,
                                 mail: response.data[0]?.mail,
                                 restaurantName: response.data[0]?.restaurantName,
@@ -190,6 +193,27 @@ router.post('/order', authenticateToken, async (req, res) => {
                     res.sendStatus(401).json({
                         message: "Invalid credentials."
                     });
+                }
+            });
+    }
+    catch (e) {
+        res.sendStatus(500).json({
+            message: "Internal server error."
+        });
+    }
+});
+
+router.get('/orders', authenticateToken, async (req, res) => {
+    try{
+        console.log(req.query?.userId);
+        axios.get('http://localhost:3001/orders?userId='+req.query?.userId)
+            .then((response: { data: any; }) => {
+                console.log(response.data);
+                if(response.data.length !== 0) {
+                    res.status(200).send(response.data);
+                }
+                else{
+                    res.status(200).send([]);
                 }
             });
     }
