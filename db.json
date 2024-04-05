@@ -301,6 +301,62 @@
       "totalPrice": 36,
       "userId": "333a",
       "date": "2024-03-10T18:11:49.078Z"
+    },
+    {
+      "id": "16b0",
+      "cart": [
+        {
+          "item": {
+            "name": "California Roll",
+            "price": "18 $",
+            "ingredients": [
+              "rice",
+              "crab stick",
+              "avocado",
+              "cucumber",
+              "sesame seeds"
+            ],
+            "nutrition": {
+              "calories": 250,
+              "protein": 12,
+              "carbohydrates": 30,
+              "fat": 15,
+              "fiber": 3
+            }
+          },
+          "quantity": 4
+        },
+        {
+          "item": {
+            "name": "Salmon Nigiri",
+            "price": "12 $",
+            "ingredients": [
+              "rice",
+              "salmon",
+              "wasabi",
+              "soy sauce"
+            ],
+            "nutrition": {
+              "calories": 150,
+              "protein": 10,
+              "carbohydrates": 20,
+              "fat": 8,
+              "fiber": 1
+            }
+          },
+          "quantity": 1
+        }
+      ],
+      "shipping": {
+        "name": "asd",
+        "address": "asd",
+        "city": "asd",
+        "country": "asd",
+        "zip": "12-123"
+      },
+      "totalPrice": 84,
+      "userId": "332a",
+      "date": "2024-04-05T11:29:36.512Z"
     }
   ]
 }

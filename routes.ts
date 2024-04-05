@@ -64,7 +64,7 @@ router.post('/register', async (req, res) => {
                         restaurantName: response.data[0]?.restaurantName,
                         restaurantAddress: response.data[0]?.restaurantAddress,
                     },
-                    token: generateAccessToken(req.body.login),
+                    token: generateAccessToken(response.data[0]),
                 });
             }
             else{
@@ -100,7 +100,7 @@ router.post('/login', async (req, res) => {
                             restaurantName: response.data[0]?.restaurantName,
                             restaurantAddress: response.data[0]?.restaurantAddress,
                         },
-                        token: generateAccessToken(req.body.login),
+                        token: generateAccessToken(response.data[0]),
                     });
                     return;
                 }
@@ -205,16 +205,17 @@ router.post('/order', authenticateToken, async (req, res) => {
 
 router.get('/orders', authenticateToken, async (req, res) => {
     try{
-        console.log(req.query?.userId);
-        axios.get('http://localhost:3001/orders?userId='+req.query?.userId)
-            .then((response: { data: any; }) => {
-                if(response.data.length !== 0) {
-                    res.status(200).send(response.data);
-                }
-                else{
-                    res.status(200).send([]);
-                }
-            });
+        const token: string = (req.headers['authorization'] as string).split(' ')[1];
+        jwt.verify(token, process.env.ACCESS_TOKEN_SECRET as string, (err: any, data: any) => {
+            axios.get('http://localhost:3001/orders?userId=' + data.id)
+                .then((response: { data: any; }) => {
+                    if (response.data.length !== 0) {
+                        res.status(200).send(response.data);
+                    } else {
+                        res.status(200).send([]);
+                    }
+                });
+        });
     }
     catch (e) {
         res.sendStatus(500).json({
@@ -224,8 +225,8 @@ router.get('/orders', authenticateToken, async (req, res) => {
 });
 
 
-const generateAccessToken = (username: string) => {
-    return jwt.sign({username: username},  process.env.ACCESS_TOKEN_SECRET as string, { expiresIn: '1800s' });
+const generateAccessToken = (data: any) => {
+    return jwt.sign({username: data.login, id: data.id},  process.env.ACCESS_TOKEN_SECRET as string, { expiresIn: '1800s' });
 }
 
 
